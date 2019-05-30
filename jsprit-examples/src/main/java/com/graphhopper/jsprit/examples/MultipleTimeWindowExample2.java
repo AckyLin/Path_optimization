@@ -17,6 +17,7 @@
  */
 package com.graphhopper.jsprit.examples;
 
+import com.graphhopper.jsprit.analysis.toolbox.GraphStreamViewer;
 import com.graphhopper.jsprit.analysis.toolbox.Plotter;
 import com.graphhopper.jsprit.core.algorithm.VehicleRoutingAlgorithm;
 import com.graphhopper.jsprit.core.algorithm.box.Jsprit;
@@ -141,7 +142,7 @@ public class MultipleTimeWindowExample2 {
         System.out.println("completion: " + a.getOperationTime());
         System.out.println("waiting: " + a.getWaitingTime());
 
-//        new GraphStreamViewer(problem, bestSolution).labelWith(Label.ID).setRenderDelay(200).display();
+        new GraphStreamViewer(problem, bestSolution).labelWith(GraphStreamViewer.Label.ID).setRenderDelay(200).display();
     }
 
 }
